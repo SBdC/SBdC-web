@@ -15,40 +15,45 @@
           align-items: center;
   width: 100vw;
   height: 100vh;
+  position: relative;
 }
 
-/* line 18, src/sass/components/_base.scss */
+/* line 19, src/sass/components/_base.scss */
 svg {
   width: 100%;
   height: 100%;
+  position: absolute;
 }
 
-/* line 24, src/sass/components/_base.scss */
+/* line 26, src/sass/components/_base.scss */
 #name {
   stroke: black;
   fill: black;
   opacity: 1;
 }
 
-/* line 30, src/sass/components/_base.scss */
+/* line 32, src/sass/components/_base.scss */
 .circle,
 .snakes {
   fill: black;
+  visibility: hidden;
 }
 
-/* line 35, src/sass/components/_base.scss */
+/* line 38, src/sass/components/_base.scss */
 .eyes {
   fill: DodgerBlue;
 }
 
-/* line 39, src/sass/components/_base.scss */
-.pencils {
-  visibility: hidden;
-}
-
 /* line 43, src/sass/components/_base.scss */
 #eye-l {
-  fill: red;
+  fill: black;
+  stroke: 1;
+  stroke: black;
+}
+
+/* line 50, src/sass/components/_base.scss */
+#pencil-form {
+  visibility: hidden;
 }
 
 /* line 4, src/sass/components/_defaultStyles.scss */

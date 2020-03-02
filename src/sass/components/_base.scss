@@ -11,6 +11,7 @@
 	align-items: center;
 	width:100vw;
 	height:100vh;
+	position:relative;
 
 	
 }
@@ -18,6 +19,7 @@
 svg{
 	width:100%;
 	height:100%;
+	position: absolute;
 }
 
 
@@ -30,17 +32,21 @@ svg{
 .circle,
 .snakes{
 	fill:black;
+	visibility: hidden;
 }
 
 .eyes{
 	fill: DodgerBlue;
 }
 
-.pencils{
-visibility: hidden;
-}
 
 #eye-l{
-	fill:red;
+	fill:black;
+	stroke:1;
+	stroke:black;
 	//transform: translateX(-30px);
+}
+
+#pencil-form{
+	visibility: hidden;
 }

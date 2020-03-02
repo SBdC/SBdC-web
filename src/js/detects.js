@@ -6,52 +6,40 @@ function morphLogo () {
     let tl = new TimelineMax();
     tl.add("begin");
     MorphSVGPlugin.convertToPath("#circle");
-    MorphSVGPlugin.convertToPath("#name");
 
-    tl.to("#circle", 2, {
+    tl.to("#circle", {
         morphSVG:{
             shape:"#snakes",
             map:"position" //or "20% 60%,35% 90%" if there are different values for the start and end shapes.
-        }
-    }, "begin");
-    // tl.to("#eye-l", 6, { x: 30,  ease: Sine.easeOut}, "eye-mov");
-    // tl.to("#eye-l", 6, { x: -23,  ease: Sine.easeOut}, "eye-mov");
-    // tl.to("#eye-l", 6, { x: 0,  ease: Sine.easeOut}, "eye-mov");
-
-}
+        },
+        duration:1
+    });
+   
 
 
-function moveEyes () {
-    let tl = new gsap.timeline();
-    tl.add("move");
-  
-    tl.fromTo(".eyes", {translateX: 0}, {translateX: 30, duration: 6, delay: 2, ease: "elastic"});
-    tl.to(".eyes", {translateX: 0, duration: 6, delay: 2, ease: "elastic"});
+    tl.fromTo(".eyes", {translateX: -27}, {translateX: 30, duration: 6,  ease: "Sine.easeOut"},"+=1");
+    tl.to(".eyes", {translateX: 0, duration: 6,  ease: "Sine.easeOut"}, "+=1");
 
-
-}
-
-
-
-
-function pencil () {
-    let tl = new gsap.timeline();
-    tl.add("pencil-morph");
-    MorphSVGPlugin.convertToPath(".eyes");
-    MorphSVGPlugin.convertToPath(".pincels");
-    tl.to(".eyes", 2, {
+   
+    tl.to("#eye-l", {
         morphSVG:{
-            shape:".pincels",
-            map:"position" //or "20% 60%,35% 90%" if there are different values for the start and end shapes.
-        }
-    }, "pencil-morph");
-    
+            shape:"#pencil-form",
+            map:"size" 
+            
+        },
+        duration:1
+    }, "+=4");
+
+    tl.to("#eye-l", {duration:1, fill:"white"}, "-=1")
+
+
 }
+
+
 
 
 
 let master = new gsap.timeline();
     master.add(morphLogo(), "scene1")
-    master.add(moveEyes(), "scene2")
-    //master.add(pencil(), "scene2")
+        //.add(moveEyes(), "scene2")
        
