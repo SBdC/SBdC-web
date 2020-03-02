@@ -10,7 +10,8 @@ var settings = {
 	styles: true,
 	svgs: true,
 	copy: true,
-	reload: true
+	reload: true,
+
 };
 
 
@@ -38,7 +39,8 @@ var paths = {
 		input: 'src/copy/**/*',
 		output: 'dist/'
 	},
-	reload: './dist/'
+	reload: './dist/',
+	
 };
 
 
@@ -175,6 +177,7 @@ var lintScripts = function (done) {
 
 	// Lint scripts
 	return src(paths.scripts.input)
+
 		.pipe(jshint())
 		.pipe(jshint.reporter('jshint-stylish'));
 

@@ -1,0 +1,146 @@
+/*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
+/**
+ * @section Base Styles
+ */
+/* line 8, src/sass/components/_base.scss */
+.logo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* line 18, src/sass/components/_base.scss */
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 24, src/sass/components/_base.scss */
+#name {
+  stroke: black;
+  fill: black;
+  opacity: 1;
+}
+
+/* line 30, src/sass/components/_base.scss */
+.circle,
+.snakes {
+  fill: black;
+}
+
+/* line 35, src/sass/components/_base.scss */
+.eyes {
+  fill: DodgerBlue;
+}
+
+/* line 39, src/sass/components/_base.scss */
+.pencils {
+  visibility: hidden;
+}
+
+/* line 43, src/sass/components/_base.scss */
+#eye-l {
+  fill: red;
+}
+
+/* line 4, src/sass/components/_defaultStyles.scss */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* line 11, src/sass/components/_defaultStyles.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* line 16, src/sass/components/_defaultStyles.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 20, src/sass/components/_defaultStyles.scss */
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* line 32, src/sass/components/_defaultStyles.scss */
+body {
+  background-color: white;
+}
+
+/* line 38, src/sass/components/_defaultStyles.scss */
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 43, src/sass/components/_defaultStyles.scss */
+body,
+button,
+input,
+select,
+textarea,
+p {
+  color: black;
+  font-size: 1em;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  text-justify: inter-word;
+}
+
+/* line 56, src/sass/components/_defaultStyles.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 61, src/sass/components/_defaultStyles.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+/* line 70, src/sass/components/_defaultStyles.scss */
+h1 {
+  color: black;
+  font-size: 2.6em;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* line 77, src/sass/components/_defaultStyles.scss */
+h2 {
+  color: black;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* line 87, src/sass/components/_defaultStyles.scss */
+h3 {
+  color: black;
+  font-size: 1.8em;
+  font-weight: 400;
+}
