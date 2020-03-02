@@ -35,9 +35,9 @@ svg{
 	visibility: hidden;
 }
 
-.eyes{
-	fill: DodgerBlue;
-}
+// .eyes{
+// 	//fill: DodgerBlue;
+// }
 
 
 #eye-l{
@@ -47,6 +47,10 @@ svg{
 	//transform: translateX(-30px);
 }
 
-#pencil-form{
+#pencil-form-l,
+#pencil-form-r,
+#pencil-details-l,
+#pencil-details-r
+{
 	visibility: hidden;
 }

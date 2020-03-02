@@ -39,11 +39,6 @@ svg {
   visibility: hidden;
 }
 
-/* line 38, src/sass/components/_base.scss */
-.eyes {
-  fill: DodgerBlue;
-}
-
 /* line 43, src/sass/components/_base.scss */
 #eye-l {
   fill: black;
@@ -52,7 +47,10 @@ svg {
 }
 
 /* line 50, src/sass/components/_base.scss */
-#pencil-form {
+#pencil-form-l,
+#pencil-form-r,
+#pencil-details-l,
+#pencil-details-r {
   visibility: hidden;
 }
 
