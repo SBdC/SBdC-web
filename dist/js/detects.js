@@ -2,6 +2,8 @@
 
 console.log('detects.js file loaded');
 
+gsap.registerPlugin(MotionPathPlugin);
+
 
 function morphLogo () {
     let tl = new TimelineMax();
@@ -31,7 +33,7 @@ function morphLogo () {
         duration:1
     }, "more");
 
-    tl.to("#eye-l", {duration:1, fill:"white"}, "more");
+    tl.to("#eye-l", {duration:1, opacity:0}, "more");
     tl.to("#pencil-form-l", {visibility:"visible"}, "more");
     tl.to("#pencil-details-l", {visibility:"visible"}, "more");
 
@@ -44,10 +46,48 @@ function morphLogo () {
         duration:1
     }, "+=2");
 
-    tl.to("#eye-r", {duration:1, fill:"white"}, "more");
+   
+
+    tl.to("#eye-r", {duration:1, opacity:0}, "more");
     tl.to("#pencil-form-r", {visibility:"visible"}, "more");
     tl.to("#pencil-details-r", {visibility:"visible"}, "more");
 
+
+    tl.to("#pencil-form-l", {
+        duration:5,
+        motionPath:{
+            path:"#eye-path-l",
+            align:"self"
+        }
+    }, "draw");
+
+    tl.to("#pencil-details-l", {
+        duration:5,
+        motionPath:{
+            path:"#eye-path-l",
+            align:"self"
+        }
+    }, "draw");
+
+    tl.from("#eye-path-l", {duration:5, drawSVG:0}, "draw")
+
+    tl.to("#pencil-form-r", {
+        duration:5,
+        motionPath:{
+            path:"#eye-path-r",
+            align:"self"
+        }
+    }, "draw");
+
+    tl.to("#pencil-details-r", {
+        duration:5,
+        motionPath:{
+            path:"#eye-path-r",
+            align:"self"
+        }
+    }, "draw");
+
+    tl.from("#eye-path-r", {duration:5, drawSVG:0}, "draw")
 
 }
 
